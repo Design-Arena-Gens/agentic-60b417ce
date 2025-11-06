@@ -1,0 +1,111 @@
+:root {
+  color-scheme: light dark;
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+  background: radial-gradient(circle at top, #1f1b2e 0%, #09090f 55%, #06060a 100%);
+  color: rgba(255, 255, 255, 0.94);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  padding: 3rem 1.5rem;
+  width: min(420px, 90vw);
+}
+
+.card {
+  backdrop-filter: blur(18px);
+  background: rgba(36, 29, 55, 0.68);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 1.5rem;
+  padding: 2.5rem 2rem;
+  text-align: center;
+  box-shadow: 0 22px 40px rgba(0, 0, 0, 0.35);
+}
+
+.emoji {
+  display: inline-block;
+  font-size: clamp(2.8rem, 4vw + 1rem, 4.4rem);
+  margin-bottom: 1rem;
+  text-shadow: 0 6px 20px rgba(0, 0, 0, 0.55);
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.16);
+  }
+}
+
+@keyframes pulseAlt {
+  0%,
+  100% {
+    transform: scale(1.1);
+  }
+  50% {
+    transform: scale(0.94);
+  }
+}
+
+.pulse {
+  animation: pulse 1.3s ease-in-out infinite;
+}
+
+.pulse-alt {
+  animation: pulseAlt 1.3s ease-in-out infinite;
+}
+
+h1 {
+  font-size: clamp(2.4rem, 3vw + 1.4rem, 3.4rem);
+  margin: 0.2rem 0 1rem;
+}
+
+p {
+  margin: 0 auto 1.5rem;
+  line-height: 1.6;
+  max-width: 24ch;
+  font-size: 1.05rem;
+  color: rgba(255, 255, 255, 0.78);
+}
+
+button {
+  appearance: none;
+  cursor: pointer;
+  border: none;
+  border-radius: 999px;
+  padding: 0.8rem 2.6rem;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #0d0d12;
+  background: linear-gradient(120deg, #f5d04c, #f083ff 60%, #80f0ff);
+  box-shadow: 0 14px 30px rgba(121, 82, 255, 0.35);
+  transition: transform 160ms ease, box-shadow 160ms ease;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 18px 36px rgba(121, 82, 255, 0.4);
+}
+
+footer {
+  margin-top: 1.7rem;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+small {
+  font-size: 0.85rem;
+  line-height: 1.4;
+}
